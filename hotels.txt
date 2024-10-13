@@ -1,0 +1,1 @@
+display multiple hotel in the specified emirate with location, approximate night cost
