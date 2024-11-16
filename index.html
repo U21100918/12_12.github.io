@@ -1,12 +1,20 @@
 <html>
-  <heading>
+  <head>
     <title> DiscoverAE </title>
 	<style>
+	
 	body {
       display: grid;
       place-items: center;       
-      margin: 0;          
+      margin: 0; 
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #796832;
+	  background-color: #fffff0;
     }
+	
+	p {
+	  font-size: 18px;
+	}
 	
     table {
       border-collapse: collapse;
@@ -21,43 +29,64 @@
 	.special {
 	  width: 0px;
 	  height: 0px;
+	  padding-bottom: 200px;
+	  padding-left: 50px;
+	  padding-right: 50px;
 	}
 	
 	.navbar {
-      background-color: #333;
+	  display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      background-color: #a28834;
 	  width: 100%;
+    }
+	
+	.website-name {
+	  padding-left: 50px;
+	  color: white;
     }
 
     .navbar a {
+	  font-size: 20px;
       float: left;
-      display: block;
+      display: flex;
       color: white;
       text-align: center;
-      padding: 20px 20px;
+      padding: 30px 30px;
       text-decoration: none;
     }
 
     .navbar a:hover {
-      background-color: #575757; /* Change color on hover */
+      background-color: #796832;
+    }
+	
+	img {
+      width: 300px;
+      height: auto;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
     }
 	</style>
-  </heading>
+  </head>
   <body>
 	<div class="navbar">
-     <a href="#home">Home</a>
-     <a href="#services">Services</a>
-     <a href="#about">About</a>
-     <a href="#contact">Contact</a>
+		<div class="website-name"><h1>DiscoverAE</h1></div>
+		<div class="nav-links">
+			<a href="#home">The 7 Emirates</a>
+			<a href="#services">Hotels</a>
+			<a href="#contact">Contact Us</a>
+		</div>
 	</div>
     <table> 
       <tr>
-        <td> 
+        <td style="height: 500px;"> 
           <h1>Welcome to Discover AE</h1>
           <p> Welcome to DiscoverAE, your ultimate guide to exploring the United Arab Emirates! Whether you're seeking luxury hotels, exciting activities, or must-see landmarks, our website helps you plan the perfect trip with ease. Discover the best the UAE has to offer and create unforgettable experiences tailored to your interests and budget. Let's start your journey today! </p>
           <p> Under the visionary leadership of Sheikh Zayed bin Sultan Al Nahyan, the UAE rapidly transformed into a modern and prosperous country. Abu Dhabi became the capital, while Dubai emerged as a global hub for business and tourism. Despite its rapid modernization, the UAE remains deeply connected to its cultural heritage, with a strong emphasis on tradition, hospitality, and the preservation of its natural environment. </p>
           <p>Today, the UAE stands as one of the most dynamic and forward-thinking countries in the Middle East, blending its ancient past with cutting-edge innovation and development. </p>
         </td>
-         <td> 
+         <td style="height: 500px;"> 
            <img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/2560px-Flag_of_the_United_Arab_Emirates.svg.png" alt="UAE_FLAG" style="width: 600px; height: 300px;">
          </td>
       </tr>
