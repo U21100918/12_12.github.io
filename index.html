@@ -29,10 +29,27 @@
 	.special {
 	  width: 0px;
 	  height: 0px;
-	  padding-bottom: 200px;
+	  padding-bottom: 100px;
 	  padding-left: 50px;
 	  padding-right: 50px;
 	}
+	
+	.button {
+      background-color: #a28834;
+	  color: white;
+      padding: 20px 40px;
+	  font-size: 24px;
+	  border: none;
+	  border-radius: 10px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	  margin-bottom: 50px;
+	  width: 500px;
+    }
+
+    .button:hover {
+      background-color: #796832;
+    }
 	
 	.navbar {
 	  display: flex;
@@ -59,6 +76,7 @@
 
     .navbar a:hover {
       background-color: #796832;
+	  transition: background-color 0.3s ease;
     }
 	
 	img {
@@ -121,5 +139,6 @@
 			</td>
 		<tr>
 	</table>
+	<button class="button"><h1>Start Planning!</h1></button>
   </body>
 </html>
