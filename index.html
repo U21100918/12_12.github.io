@@ -4,97 +4,102 @@
 	<style>
 	
 	body {
-      display: grid;
-      place-items: center;       
-      margin: 0; 
-      font-family: 'Trebuchet MS', sans-serif;
-      color: #796832;
-	  background-color: #fffff0;
+		display: grid;
+		place-items: center;       
+		margin: 0; 
+		font-family: 'Trebuchet MS', sans-serif;
+		color: #796832;
+		background-color: #fffff0;
+		padding-top: 100px;
     }
 	
 	p {
-	  font-size: 16px;
+		font-size: 16px;
 	}
 	
     table {
-      border-collapse: collapse;
+		border-collapse: collapse;
     }
 	
     td {
-      padding: 10px;
-	  padding-bottom: 40px;
-	  padding-top: 40px;
-	  width: 500px;
-	  height: 350px;
+		padding: 10px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+		width: 500px;
+		height: 350px;
     }
 	
 	.special {
-	  width: 0px;
-	  height: 0px;
-	  padding-bottom: 50px;
-	  padding-left: 25px;
-	  padding-right: 25px;
+		width: 0px;
+		height: 0px;
+		padding-bottom: 50px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	
 	.button {
-      background-color: #a28834;
-	  color: white;
-      padding: 10px 20px;
-	  font-size: 12px;
-	  border: none;
-	  border-radius: 5px;
-	  cursor: pointer;
-	  transition: background-color 0.3s ease;
-	  margin-bottom: 25px;
-	  margin-top: 25px;
-	  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-	  text-decoration: none;
-      display: inline-block;
+		background-color: #a28834;
+		color: white;
+		padding: 10px 20px;
+		font-size: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		margin-bottom: 25px;
+		margin-top: 25px;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+		text-decoration: none;
+		display: inline-block;
     }
 
     .button:hover {
-      background-color: #796832;
+		background-color: #796832;
     }
 	
 	.navbar {
-	  display: flex;
-      justify-content: space-between;
-      align-items: center; 
-      background-color: #a28834;
-	  width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center; 
+		background-color: #a28834;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
     }
 	
 	.website-name {
-	  padding-left: 25px;
-	  color: white;
+		padding-left: 25px;
+		color: white;
     }
 
     .navbar a {
-	  font-size: 20px;
-      float: left;
-      display: flex;
-      color: white;
-      text-align: center;
-      padding: 30px 30px;
-      text-decoration: none;
+		font-size: 20px;
+		float: left;
+		display: flex;
+		color: white;
+		text-align: center;
+		padding: 30px 30px;
+		text-decoration: none;
     }
 
     .navbar a:hover {
-      background-color: #796832;
-	  transition: background-color 0.3s ease;
+		background-color: #796832;
+		transition: background-color 0.3s ease;
     }
 	
 	img {
-      height: auto;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
+		height: auto;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
     }
 	</style>
   </head>
   <body>
 	<div class="navbar">
 		<div class="website-name"><h1>DiscoverAE</h1></div>
-		<div class="nav-links">
+		<div>
 			<a href="the_7_emirates">The 7 Emirates</a>
 			<a href="#services">Hotels</a>
 			<a href="#contact">Contact Us</a>
