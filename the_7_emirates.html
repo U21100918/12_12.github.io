@@ -13,6 +13,42 @@
 		padding-top: 100px;
     }
 	
+	p {
+		font-size: 16px;
+	}
+	
+	.button {
+		background-color: #a28834;
+		color: white;
+		padding: 10px 20px;
+		font-size: 12px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		margin-bottom: 25px;
+		margin-top: 25px;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+		text-decoration: none;
+		display: inline-block;
+    }
+
+    .button:hover {
+		background-color: #796832;
+    }
+	
+	table {
+		border-collapse: collapse;
+    }
+	
+    td {
+		padding: 10px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+		width: 500px;
+		height: 350px;
+    }
+	
 	.navbar {
 		display: flex;
 		justify-content: space-between;
@@ -44,6 +80,12 @@
 		background-color: #796832;
 		transition: background-color 0.3s ease;
     }
+	
+	img {
+		height: auto;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+    }
     </style>
 </head>
 <body>
@@ -57,6 +99,29 @@
             <a href="#contact">Contact Us</a>
         </div>
     </div>
-        <h1>The 7 Emirates</h1>
+	<table>
+		<tr>
+			<td colspan="2" style="height: 250px;">
+			<h1> The 7 Emirates </h1>
+			<p>The United Arab Emirates (UAE) is a vibrant federation composed of seven distinct emirates, each with its own rich history, cultural heritage, and diverse range of attractions and experiences. From bustling urban centers and iconic architectural marvels to tranquil beaches, towering mountains, and desert landscapes, the emirates collectively showcase the UAE’s remarkable blend of tradition and modernity, making it a destination like no other.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<a href="Abu_Dhabi" class="button"><h1>Abu Dhabi</h1><p>The largest emirate and the capital of the UAE, Abu Dhabi is known for its stunning architecture, luxurious lifestyle, and cultural landmarks such as the Sheikh Zayed Grand Mosque and the Louvre Abu Dhabi. It also boasts pristine beaches and natural reserves like Sir Bani Yas Island.</p></a>
+			</td>
+			<td>
+				<img src ="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f9/08/b1/mosquee-1.jpg?w=600&h=-1&s=1" alt="Mosque" style="width: 400px; height: 300px;">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src ="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/51/aa/43/burj-alarab-outside.jpg?w=600&h=-1&s=1" alt="Burj_Al_Arab" style="width: 400px; height: 300px;">
+			</td>
+			<td>
+			<a href="Dubai" class="button"><h1>Dubai</h1><p>Famous for its ultramodern skyline, world-class shopping, and iconic attractions like the Burj Khalifa and Palm Jumeirah, Dubai is a global hub for tourism and innovation. Its blend of traditional souks and futuristic cityscapes creates a unique charm.</p></a>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
