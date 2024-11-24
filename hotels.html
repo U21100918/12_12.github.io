@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Hotel Listings</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #796832;
+            background-color: #fffff0;
+            padding-top: 100px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #a28834;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .website-name {
+            padding-left: 25px;
+            color: white;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #796832;
+            transition: background-color 0.3s ease;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #a28834;
+            color: white;
+        }
+
+        .button {
+            background-color: #a28834;
+            color: white;
+            padding: 8px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #796832;
+        }
+    </style>
+    <script>
+        function filterHotels() {
+            const location = document.getElementById("location").value.toLowerCase();
+            const maxPrice = parseInt(document.getElementById("price").value, 10);
+            const table = document.getElementById("hotelTable").getElementsByTagName("tbody")[0];
+            const rows = table.getElementsByTagName("tr");
+
+            for (let row of rows) {
+                const hotelLocation = row.cells[4].innerText.toLowerCase();
+                const hotelPrice = parseInt(row.cells[1].innerText, 10);
+
+                if (
+                    (location === "" || hotelLocation.includes(location)) &&
+                    (isNaN(maxPrice) || hotelPrice <= maxPrice)
+                ) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="website-name">
+            <h1>DiscoverAE</h1>
+        </div>
+        <div>
+            <a href="index">Home</a>
+            <a href="the_7_emirates">The 7 Emirates</a>
+            <a href="hotels">Hotels</a>
+            <a href="form">Contact Us</a>
+        </div>
+    </div>
+
+    <h1>Hotel Listings</h1>
+    <div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location">
+        <label for="price">Max Price:</label>
+        <input type="number" id="price" placeholder="Enter price">
+        <button class="button" onclick="filterHotels()">Filter</button>
+    </div>
+
+    <table id="hotelTable">
+        <thead>
+            <tr>
+                <th>Information</th>
+                <th>Price</th>
+                <th>Contact</th>
+                <th>Ratings</th>
+                <th>Location</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hotel A</td>
+                <td>200</td>
+                <td>+123456789</td>
+                <td>4.5</td>
+                <td>Dubai</td>
+                <td><img src="hotel_a.jpg" alt="Hotel A"></td>
+            </tr>
+            <tr>
+                <td>Hotel B</td>
+                <td>150</td>
+                <td>+987654321</td>
+                <td>4.2</td>
+                <td>Abu Dhabi</td>
+                <td><img src="hotel_b.jpg" alt="Hotel B"></td>
+            </tr>
+            <tr>
+                <td>Hotel C</td>
+                <td>100</td>
+                <td>+1122334455</td>
+                <td>3.8</td>
+                <td>Sharjah</td>
+                <td><img src="hotel_c.jpg" alt="Hotel C"></td>
+            </tr>
+            <tr>
+                <td>Hotel D</td>
+                <td>250</td>
+                <td>+5566778899</td>
+                <td>4.7</td>
+                <td>Dubai</td>
+                <td><img src="hotel_d.jpg" alt="Hotel D"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
