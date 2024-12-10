@@ -1,6 +1,29 @@
 <html>
 <head>
     <title>Hotel Listings</title>
+	<script>
+    function filterHotels() {
+        var location = document.getElementById("location").value.toLowerCase();
+        var maxPrice = parseInt(document.getElementById("price").value, 10);
+        var table = document.getElementById("hotelTable").getElementsByTagName("tbody")[0];
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var hotelLocation = row.cells[4].innerText.toLowerCase();
+            var hotelPrice = parseInt(row.cells[1].innerText, 10);
+
+            if (
+                (location === "" || hotelLocation.includes(location)) &&
+                (isNaN(maxPrice) || hotelPrice <= maxPrice)
+            ) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        }
+    }
+</script>
     <style>
         body {
             display: grid;
@@ -46,6 +69,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+			margin-top: 20px;
         }
 
         th, td {
@@ -67,7 +91,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
             text-decoration: none;
             display: inline-block;
         }
@@ -75,29 +98,12 @@
         .button:hover {
             background-color: #796832;
         }
+		
+		img {
+			width: 200px;
+            height: 200px;
+		}
     </style>
-    <script>
-        function filterHotels() {
-            const location = document.getElementById("location").value.toLowerCase();
-            const maxPrice = parseInt(document.getElementById("price").value, 10);
-            const table = document.getElementById("hotelTable").getElementsByTagName("tbody")[0];
-            const rows = table.getElementsByTagName("tr");
-
-            for (let row of rows) {
-                const hotelLocation = row.cells[4].innerText.toLowerCase();
-                const hotelPrice = parseInt(row.cells[1].innerText, 10);
-
-                if (
-                    (location === "" || hotelLocation.includes(location)) &&
-                    (isNaN(maxPrice) || hotelPrice <= maxPrice)
-                ) {
-                    row.style.display = "";
-                } else {
-                    row.style.display = "none";
-                }
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="navbar">
@@ -134,12 +140,12 @@
         </thead>
         <tbody>
             <tr>
-                <td>Hotel A</td>
-                <td>200</td>
-                <td>+123456789</td>
-                <td>4.5</td>
+                <td>Radison Blu Hotel</td>
+                <td>213</td>
+                <td>04 222 7171</td>
+                <td>4.4</td>
                 <td>Dubai</td>
-                <td><img src="hotel_a.jpg" alt="Hotel A"></td>
+                <td><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/232807306.jpg?k=9a5cb0bf77378a5e5ee4d95087effe18606e87aaae68a4977bb2eb46fc58cf14&o=" alt="Hotel_Rad"></td>
             </tr>
             <tr>
                 <td>Hotel B</td>
