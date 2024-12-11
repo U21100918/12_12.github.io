@@ -1,1 +1,25 @@
 
+Purpose: Create an interactive webpage about the 7 Emirates of the UAE, detailing activities available in each emirate and offering hotel price options based on user budget.
+
+Key Features:
+
+Activities Section: Display a list of activities for each emirate.
+Hotel Prices Section:
+Users can input their budget.
+Show hotel options that match or are within the entered budget.
+Interactive Elements:
+
+Input field for users to set their hotel budget.
+Dynamic display or filtering of hotels based on the budget.
+Layout:
+
+Separate sections for each emirate.
+Clear headings and subheadings for easy navigation.
+Include images or descriptions for a visually engaging experience.
+User Experience:
+
+Ensure responsiveness for all devices.
+Provide feedback or prompts for budget input and activity selection.
+Optional Enhancements:
+
+Using JavaScript for real-time filtering of prices and location.
